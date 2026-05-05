@@ -1,32 +1,41 @@
 # 🏥 PrimeCare Therapy Center Database (SQL Project)
 
+---
+
 ## 📌 Overview
 
-This project implements a relational database system for a therapy center using SQL. It models real-world entities such as patients, therapists, appointments, services, and payments, and demonstrates how SQL can be used to manage data and generate business insights.
+This project implements a relational database system for a therapy center using SQL. It models real-world operations such as patient management, therapist assignments, appointments, services, and payments.
 
-The goal was to move beyond simple queries and build a structured system that reflects how databases are used in real applications.
+The goal of this project was to go beyond basic SQL queries and design a structured system that reflects how databases are used in real business environments. The database supports both operational workflows and analytical queries for decision-making.
 
 ---
 
-## 🎯 Objective
+## 🎯 Objectives
 
 * Design a normalized relational database (3NF)
-* Implement tables with relationships and constraints
+* Establish relationships using primary and foreign keys
+* Implement constraints to ensure data integrity
 * Perform data operations (insert, update, delete)
-* Write SQL queries to extract meaningful insights
+* Write SQL queries to extract business insights
 
 ---
 
 ## 🧱 Database Setup
+
+The database environment is initialized using:
 
 ```sql
 CREATE DATABASE IF NOT EXISTS primecaredb;
 USE primecaredb;
 ```
 
+This ensures all tables and operations are executed within a dedicated database.
+
 ---
 
-## 📊 Tables Included
+## 📊 Database Design
+
+The system is composed of multiple interconnected tables representing real-world entities:
 
 * Patient
 * Therapist
@@ -43,21 +52,28 @@ USE primecaredb;
 * Specialization
 * Therapist_Specialization
 
----
-
-## 🔗 Key Design Features
-
-* Primary Keys for unique identification
-* Foreign Keys to maintain relationships
-* Constraints:
-
-  * NOT NULL
-  * UNIQUE
-  * CHECK
-* Normalized schema (3NF) to reduce redundancy
+Each table is designed to capture specific aspects of the therapy center's operations.
 
 ---
 
+### 🔗 Key Design Features
+
+* **Primary Keys** for unique record identification
+* **Foreign Keys** to maintain relationships across tables
+* **Constraints**:
+
+  * NOT NULL → ensures required fields
+  * UNIQUE → avoids duplicate entries (e.g., email)
+  * CHECK → enforces valid values
+* **Normalization (3NF)** to reduce redundancy and improve consistency
+
+---
+
+### 📸 Example Table (Patient)
+
+<img width="469" height="347" alt="0" src="https://github.com/user-attachments/assets/6087d2d1-ee72-4f69-87ed-e68d7e590e7e" />
+
+---
 
 ## ⚙️ Project Structure
 
@@ -84,7 +100,7 @@ primecare-sql-database/
 
 ## 🚀 How to Run
 
-### Option 1: Run everything at once
+### Option 1: Run all scripts
 
 ```sql
 SOURCE sql/run_all.sql;
@@ -92,62 +108,89 @@ SOURCE sql/run_all.sql;
 
 ### Option 2: Run step-by-step
 
-1. Run `01_create_tables.sql`
-2. Run `02_insert_data.sql`
-3. Run `03_updates.sql`
-4. Run `04_basic_queries.sql`
-5. Run `05_advanced_queries.sql`
+1. Execute `01_create_tables.sql`
+2. Execute `02_insert_data.sql`
+3. Execute `03_updates.sql`
+4. Execute `04_basic_queries.sql`
+5. Execute `05_advanced_queries.sql`
+
+This ensures the database is built in the correct sequence.
 
 ---
 
 ## ⚙️ Data Operations
 
-* Inserted sample data into all tables
-* Updated and modified records
-* Deleted unnecessary data
-* Maintained data integrity
+The project includes full data lifecycle operations:
+
+* Inserted realistic sample data across all tables
+* Updated patient and appointment records
+* Deleted unnecessary or test entries
+* Maintained referential integrity using constraints
+
+---
+
+### 📸 Data Insertion Example
+
+<img width="673" height="334" alt="ID1" src="https://github.com/user-attachments/assets/3728c5d8-0fe4-4a84-9aed-43df2fb2855a" /><img width="509" height="235" alt="BQJ1" src="https://github.com/user-attachments/assets/bf8fbb53-7c18-4f15-8f12-85a319961c6c" />
 
 ---
 
 ## 📊 SQL Queries & Analysis
 
+The project includes both basic and advanced queries to retrieve and analyze data.
+
+---
+
 ### 🔹 Basic Queries
 
-* Retrieve patient and therapist records
-* View appointment details
-* Filter and sort data
+* Retrieve patient records
+* View therapist details
+* List appointments
+* Filter and sort results
+
+<img width="507" height="222" alt="BQJ3" src="https://github.com/user-attachments/assets/54a9f1c5-06b3-456f-9082-3ccd902ecaa0" />
+
+---
 
 ### 🔹 Advanced Queries
 
-* Multi-table JOINs
-* Aggregations (SUM, AVG, COUNT)
+* Multi-table JOINs to combine related data
+* Aggregations using SUM, AVG, COUNT
 * Subqueries for deeper insights
 
 ---
 
-## 📈 Example Business Insights
+### 📸 Advanced Query Example
+
+<img width="648" height="214" alt="Aq1" src="https://github.com/user-attachments/assets/de3b0bf8-4aa8-4b94-b96d-c456a9636752" />
+
+---
+
+## 📈 Business Insights
+
+The database enables extraction of meaningful insights, such as:
 
 * Total revenue generated by each therapist
 * Most frequently used services
-* Appointment distribution
-* Patient activity trends
-
+* Appointment distribution and trends
+* Patient activity patterns
 
 
 ## 🧠 What This Project Demonstrates
 
-* Real-world database design
-* Strong SQL fundamentals
-* Ability to work with relational data
-* Translating data into business insights
+* Ability to design and implement relational databases
+* Strong understanding of SQL fundamentals
+* Experience with real-world data modeling
+* Ability to translate data into business insights
 
 ---
 
 ## 💡 Future Improvements
 
-* Add stored procedures
-* Build Power BI dashboard
-* Connect database to backend application
+* Implement stored procedures and triggers
+* Build dashboards using Power BI
+* Integrate database with a backend application
+* Optimize queries for performance
 
 ---
 
